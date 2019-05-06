@@ -1,0 +1,20 @@
+:root {
+  background: #f0f0ed;
+  box-sizing: border-box;
+  font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular',
+    'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
