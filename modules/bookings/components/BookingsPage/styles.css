@@ -1,3 +1,146 @@
 .Title {
-  color: #f00;
+  font-size:36px;
+  font-weight: normal;
+}
+.StartButtons {
+  border:#888888 1px solid;
+  width:300px;
+  padding:10px;
+  background:none;
+  font-size:12px;
+  font-weight: bold;
+  color: #888888;
+}
+.Left {
+  float:left;
+  width:350px;
+  background: #EBEBE4;
+}
+.Middle {
+  float:right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:calc(100% - 350px);
+  height:100vh;
+}
+.Search {
+  padding:20px;
+  border-bottom:#D4D4D3 1px solid;
+  position: relative;
+  height:80px;
+  overflow: hidden;
+}
+.Search input {
+  width:calc(100% - 30px);
+  border:none;
+  background:#FFF;
+  padding:10px;
+}
+.SearchIcon {
+  width:20px;
+  position: absolute;
+  top:28px;
+  right:60px;
+  opacity:0.4;
+}
+.FilterIcon {
+  width:20px;
+  height: 20px;
+  position: absolute;
+  top:30px;
+  right:15px;
+  opacity:0.4;
+}
+.List {
+  height:calc(100vh - 200px);
+  overflow: auto;
+}
+.ListFooter {
+  border-top: #D4D4D3 1px solid;
+  height:120px;
+}
+.FooterButtons {
+  border-bottom: #E1E1E0 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  opacity: 0.5;
+  font-size: 14px;
+}
+.CreateBooking {
+  background: #76F1AB;
+  border:none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width:90%;
+  margin:20px auto;
+  display: block;
+  padding:12px;
+  cursor: pointer;
+}
+.Item {
+  border-bottom: #DFDFDB 1px solid;
+  overflow: hidden;
+  padding:15px;
+  color:#848484;
+  font-size:14px;
+  transition: all 0.3s;
+  position: relative;
+}
+.RepliedIcon {
+  width:10px;
+  height:10px;
+  opacity: 0.5;
+}
+.Item:hover {
+  background: #FFF;
+  cursor: pointer;
+}
+.Status {
+  width:10px;
+  height:10px;
+  background:#C2C9C6;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.Tentative {
+  background: #F1C985;
+}
+.Booked {
+  background: #B6E672;
+}
+.Unavailable {
+  background: #C2C9C6;
+}
+.Declined {
+  background: #FFB5AE;
+}
+.ItemLeft {
+  float:left;
+  padding:5px 15px;
+}
+.Date {
+  float:right;
+}
+.ItemBottom {
+  opacity: 0.6;
+}
+.ItemBottom svg {
+  width: 12px;
+  height: 11px;
+  opacity: 0.5;
+}
+.Price {
+  position: absolute;
+  right:12px;
+  bottom:15px;
+  border:#D4D4D3 1px solid;
+  padding:3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  opacity:0.7;
 }
