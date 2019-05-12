@@ -1,0 +1,89 @@
+.item {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid lightgrey;
+    opacity: 0.8;
+    &:hover{
+        cursor: pointer;
+    }
+
+    &--read{
+        background: white;
+    }
+
+    &__icons{
+        position: relative;
+        margin: 10px 15px;
+    }
+    &__status {
+        padding-left: 3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        
+        &--Booked {
+            background: green;
+        }
+        &--Declined {
+            background: red;
+        }
+        &--Unavailable {
+            background: gray;
+        }
+        &--Tentative, &--Open {
+            background: orange;
+        }
+    }
+    &__replied {
+        width: 12px;
+        padding-top: 8px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-right: 10px;
+        height: 70px;
+        width: calc(100% - 15px);
+        font-size: 14px;
+        color: darkslategrey;     
+    }
+
+    &__first {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__guest {
+        font-weight: bold;
+    }
+
+    &__second {
+        order: 2;
+        line-break: auto;
+        line-clamp: 1;
+    }
+
+    &__third {
+        order: 3;
+        opacity: 0.5;
+    }
+    &__night, &__user {
+        width: 14px;
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+    &__amount {
+        float: right;
+        border: 2px solid lightgrey;
+        border-radius: 30%;
+        border-spacing: 2px;
+    }
+    &__arrival {
+        margin-right: 5px;
+    }
+}

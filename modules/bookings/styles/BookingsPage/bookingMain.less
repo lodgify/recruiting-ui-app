@@ -1,0 +1,42 @@
+.main {
+    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:calc(100% - 350px);
+        
+    &__logo {
+        margin-top: 100px;
+    }
+
+    &__title {
+        padding-top: 20px;
+        font-size: 40px;
+        font-weight: 500;
+        color: grey;
+    }
+
+    &__subtitle {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        font-size: 12px;
+        font-weight: 400;
+        color: grey;
+    }
+
+    &__button {
+        margin-top: 10px;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        border: 2px solid grey;
+        color: darkslategrey;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

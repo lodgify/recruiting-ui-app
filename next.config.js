@@ -1,6 +1,7 @@
+const withLess = require('@zeit/next-less');
 const withCSS = require('@zeit/next-css');
 
-module.exports = withCSS({
+module.exports = withLess(withCSS({
   cssModules: true,
   webpack(config) {
     config.module.rules.push({
@@ -10,4 +11,4 @@ module.exports = withCSS({
 
     return config;
   },
-});
+}));
