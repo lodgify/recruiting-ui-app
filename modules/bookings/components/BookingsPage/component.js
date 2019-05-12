@@ -19,6 +19,10 @@ export class Component extends React.PureComponent {
     data: arrayOf(shape({ guestName: string })),
   };
 
+  state = {
+    filter:""
+  }
+
   componentDidMount() {
     this.props.fetchBookings();
   }
@@ -38,12 +42,14 @@ export class Component extends React.PureComponent {
         </div>
         <div className={styles.Left}>
           <div className={styles.Search}>
-            <input placeholder="Search" />
+            <input placeholder="Search" onInput={e=>this.setState({filter:e.target.value})} />
             <SearchIcon className={styles.SearchIcon} />
             <FilterIcon className={styles.FilterIcon} />
           </div>
           <div className={styles.List}>
-            {this.props.data.map(booking => <Item booking={booking} key={booking.id} />)}
+            {this.props.data.filter(b=>{
+              if (b.guestName.toLowerCase().indexOf(this.state.filter.toLowerCase())>-1 || this.state.filter==="") return true;
+            }).map(booking => <Item booking={booking} key={booking.id} />)}
           </div>
           <div className={styles.ListFooter}>
             <div className={styles.FooterButtons}>
