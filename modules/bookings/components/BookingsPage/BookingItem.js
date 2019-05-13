@@ -3,10 +3,10 @@ import NightIcon from '../../../../static/moon.svg';
 import UserIcon from '../../../../static/user.svg';
 import styles from '../../styles/BookingsPage/bookingItem.less';
 import {calcTotalNights, formatShortDate} from '../../utils';
+import {object} from 'prop-types';
 
 const BookingItem = ({booking}) => {
-    const {dateArrival, dateCreated, dateDeparture, id, read, replied, status} = booking;
-
+    const {dateArrival, dateCreated, dateDeparture, read, replied, status} = booking;
     const totalNights = calcTotalNights(new Date(dateArrival), new Date(dateDeparture));
     const dateArrivalFormat = formatShortDate(dateArrival);
     const itemClass = styles.item+(read ? '':' '+styles['item--read']);
@@ -36,6 +36,10 @@ const BookingItem = ({booking}) => {
             </div>
         </div>
     )
+};
+
+BookingItem.propTypes = {
+    booking: object
 }
 
 export default BookingItem;

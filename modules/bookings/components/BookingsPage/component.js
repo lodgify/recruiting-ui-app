@@ -1,8 +1,7 @@
 import React from 'react';
 import { func, bool, arrayOf, shape, string } from 'prop-types';
 import BookingMain from './BookingMain';
-import BookingList from './BookingList';
-import styles from '../../styles/styles.css';
+import BookingSidebar from './BookingSidebar';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
@@ -23,7 +22,7 @@ export class Component extends React.PureComponent {
     const bookings = this.props.data;
     return (
       <>
-        <BookingList bookings={bookings} />
+        <BookingSidebar bookings={bookings} />
         <BookingMain />
       </>
     );
