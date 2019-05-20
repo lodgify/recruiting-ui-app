@@ -1,6 +1,13 @@
 .list {
     height: 500px;
     overflow: auto;
+
+    &-loading, &-failed{
+        text-align: center;
+        vertical-align: middle;
+        color: grey;
+    }
+
     &::-webkit-scrollbar{
         width: 5px;
     };

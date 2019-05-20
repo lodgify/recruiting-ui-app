@@ -1,21 +1,16 @@
-import BookingList from './BookingList';
+import BookingListContainer from './BookingListContainer';
+import BookingListActions from './BookingListActions';
 import Search from '../Search';
-import Actions from '../Actions';
 import styles from '../../styles/BookingsPage/bookingSidebar.less';
 import {texts} from '../../constants';
-import {array} from 'prop-types';
 
-const BookingSidebar = ({bookings}) => (
+const BookingSidebar = () => (
     <div className={styles.sidebar}>
         <Search/>
-        <BookingList bookings={bookings}/>
-        <Actions/>
+        <BookingListContainer/>
+        <BookingListActions/>
         <div className={styles.sidebar__button}>{texts.button_create_booking}</div>
     </div>
 )
-
-BookingSidebar.propTypes = {
-    bookings: array
-}
 
 export default BookingSidebar;

@@ -1,1 +1,1 @@
-export { Container as BookingsPage } from './container';
+export { Component as BookingsPage } from './component';

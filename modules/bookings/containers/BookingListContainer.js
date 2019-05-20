@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchBookings } from '../../ducks';
-import { Component } from './component';
+import { BookingList } from './BookingList';
 
 const mapStateToProps = state => ({
   isLoading: state.bookings.isLoading,
@@ -13,7 +13,9 @@ const mapDispathToProps = {
   fetchBookings,
 };
 
-export const Container = connect(
+const BookingListContainer = connect(
   mapStateToProps,
   mapDispathToProps,
-)(Component);
+)(BookingList);
+
+export default BookingListContainer;

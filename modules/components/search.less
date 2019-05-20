@@ -1,0 +1,33 @@
+.search {
+    position: relative;
+    margin: 15px 20px;
+    height: 40px;
+
+    &__input {
+        width: 280px;
+        height: 30px;
+        padding-left: 8px;
+        font-size: 14px;
+        background-color: white;
+        border: unset;
+        &::-webkit-input-placeholder {
+            opacity: 0.5;
+        }
+    }
+
+    &__icon, &__filter {
+        width: 14px;
+        position: relative;
+        font-weight: 600;
+        opacity: 0.5;
+    }  
+    &__icon {
+        right: 30px;
+    }
+
+    &__filter {
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
