@@ -4,7 +4,7 @@ import faker from 'faker';
 export const fetchBookings = async () =>
   new Promise(resolve => {
     setTimeout(() => {
-      resolve(new Array(500).fill(null).map(generateBooking));
+      resolve(new Array(30).fill(null).map(generateBooking));
     }, SLEEP_DURATION);
   });
 
@@ -16,7 +16,7 @@ const generateBooking = () => {
     amountDue,
     amountPaid,
     currencyCode: 'USD',
-    dateArrival: faker.date.future(),
+    dateArrival: faker.date.recent(),
     dateCreated: faker.date.past(),
     dateDeparture: faker.date.future(),
     dateModified: faker.date.recent(),
