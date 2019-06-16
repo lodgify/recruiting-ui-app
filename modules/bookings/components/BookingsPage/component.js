@@ -1,8 +1,11 @@
 import React from 'react';
-import { func, bool, arrayOf, shape, string } from 'prop-types';
+import { func, bool } from 'prop-types';
+import { BookingArrayProps } from '../../state/state';
 
-import CalendarLogo from '../../../../static/calendar.svg';
-import styles from './styles.css';
+import Sidebar from './Sidebar';
+import MainContent from './MainContent';
+
+import styles from './index.css';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
@@ -10,7 +13,7 @@ export class Component extends React.PureComponent {
     fetchBookings: func.isRequired,
     isLoading: bool,
     hasFailed: bool,
-    data: arrayOf(shape({ guestName: string })),
+    data: BookingArrayProps,
   };
 
   componentDidMount() {
@@ -22,11 +25,10 @@ export class Component extends React.PureComponent {
     if (this.props.hasFailed || !this.props.data) return 'Failed :(';
 
     return (
-      <>
-        <h1 className={styles.Title}>Welcome!</h1>
-        <CalendarLogo />
-        {this.props.data.map(booking => booking.guestName)}
-      </>
+      <div className={styles.layout}>
+        <Sidebar bookings={this.props.data} />
+        <MainContent />
+      </div>
     );
   }
 }

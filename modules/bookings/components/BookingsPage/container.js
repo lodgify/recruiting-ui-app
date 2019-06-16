@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchBookings } from '../../ducks';
+import { fetchBookings } from '../../state/actions';
 import { Component } from './component';
 
 const mapStateToProps = state => ({
@@ -9,11 +9,11 @@ const mapStateToProps = state => ({
   data: state.bookings.data,
 });
 
-const mapDispathToProps = {
+const mapDispatchToProps = {
   fetchBookings,
 };
 
 export const Container = connect(
   mapStateToProps,
-  mapDispathToProps,
+  mapDispatchToProps,
 )(Component);

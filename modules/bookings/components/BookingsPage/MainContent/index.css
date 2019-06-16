@@ -1,0 +1,34 @@
+.Content {
+  width: auto;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Content h1 {
+  font-size: 2rem;
+  color: #bbbbbb;
+}
+
+.Content p {
+  color: #bbbbbb;
+  margin-bottom: 3rem;
+}
+
+.Content button {
+  background: none;
+  border: none;
+  display: block;
+  border: 2px solid #666666;
+  color: #666666;
+  width: 400px;
+  height: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  padding: 0.6rem;
+  cursor: pointer;
+}

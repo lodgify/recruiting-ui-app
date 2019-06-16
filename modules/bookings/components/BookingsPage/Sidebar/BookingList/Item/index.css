@@ -1,0 +1,69 @@
+.Item {
+  background: #ebebe4;
+  padding: 0.8rem;
+  display: flex;
+  border-bottom: 1px solid #bbbbbb;
+  font-size: 0.8rem;
+}
+
+.Item:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.Item p {
+  margin: 0;
+}
+
+.Item .ItemStatus {
+  padding-right: 0.4rem;
+}
+
+.Item .ItemStatus > div {
+  margin-top: 0.1rem;
+}
+
+.Item .ItemContent {
+  padding: 0 0 0 0.4rem;
+  width: 100%;
+  color: #666666;
+}
+
+.Item .ItemContent > div {
+  margin-bottom: 0.1rem;
+}
+
+.Item .ItemContent .GuestName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item .ItemContent .GuestName p:first-child {
+  font-weight: bold;
+}
+
+.Item .ItemContent .PropertyName {
+  padding-right: 0.8rem;
+}
+.Item .ItemContent .PropertyName p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Item .ItemContent .ItemDetails {
+  display: flex;
+  justify-content: space-between;
+  color: #bbbbbb;
+}
+
+.Item .ItemContent .ItemDetails p {
+  align-self: center;
+}
+
+.Item .ItemContent .ItemDetails p:last-child {
+  border: 1px solid #bbbbbb;
+  border-radius: 0.8rem;
+  padding: 0.2rem;
+  font-size: 0.65rem;
+}

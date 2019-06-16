@@ -1,0 +1,44 @@
+.Search {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: #ebebe4;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+.Search > .SearchInput,
+.Search > .Filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Search .SearchInput input {
+  height: 2.2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  margin-right: -2.4rem;
+  width: 240px;
+  color: #666666;
+}
+
+.Search .SearchInput input:focus {
+  outline-color: #76efaa;
+}
+
+.Search .SearchInput input::placeholder {
+  color: #bbbbbb;
+}
+
+.Search svg {
+  cursor: pointer;
+}
+
+.Search .Filter svg {
+  width: 20px;
+}

@@ -1,0 +1,5 @@
+.BookingList {
+  overflow-y: scroll;
+  padding-bottom: 0;
+  height: calc(100vh - 60px - 7.6rem);
+}

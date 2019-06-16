@@ -1,0 +1,22 @@
+.BookingOptions {
+  height: 2.6rem;
+  border-top: 1px solid #bbbbbb;
+  background: #ebebe4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.BookingOptions button {
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666666;
+}
+
+.BookingOptions svg {
+  cursor: pointer;
+}
