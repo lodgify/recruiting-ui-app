@@ -1,0 +1,41 @@
+@import 'modules/core/_variables';
+@import 'modules/core/_mixins';
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  color: $gray;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  *:not(p) {
+    text-transform: capitalize;
+  }
+
+  button {
+    min-width: 300px;
+    border: 1px solid $dark;
+    color: $dark;
+    background-color: $lightBg;
+    padding: 10px;
+    margin-bottom: 10px;
+    @include transition-duration(0.5s);
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($light, 20);
+    }
+  }
+}

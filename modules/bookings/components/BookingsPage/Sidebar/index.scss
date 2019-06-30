@@ -1,0 +1,7 @@
+@import 'modules/core/_variables';
+
+.sidebar {
+  background-color: darken($light, 8);
+  min-height: 100vh;
+  width: 350px;
+}

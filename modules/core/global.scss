@@ -1,5 +1,7 @@
+@import 'modules/core/_variables';
+
 :root {
-  background: #f0f0ed;
+  background: $lightBg;
   box-sizing: border-box;
   font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular',
     'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
