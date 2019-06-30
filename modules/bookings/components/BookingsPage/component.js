@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { func, bool } from 'prop-types';
 import { BookingsEntityProps } from 'modules/bookings/bookingsEntityProps';
 
@@ -25,6 +26,9 @@ export class Component extends React.PureComponent {
 
     return (
       <div className={styles.container}>
+        <Head>
+          <title>Lodgify Bookings Dashboard</title>
+        </Head>
         <Sidebar items={this.props.data} />
         <Content />
       </div>
