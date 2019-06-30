@@ -32,8 +32,21 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.7.0",
+    "lint-staged": "^8.2.1",
     "postcss": "^7.0.17",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "modules/**/*.{js,jsx,json,scss}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   }
 }
