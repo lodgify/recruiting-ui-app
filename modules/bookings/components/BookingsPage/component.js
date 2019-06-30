@@ -2,7 +2,7 @@ import React from 'react';
 import { func, bool, arrayOf, shape, string } from 'prop-types';
 
 import CalendarLogo from '../../../../static/calendar.svg';
-import styles from './styles.css';
+import styles from './styles.scss';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
