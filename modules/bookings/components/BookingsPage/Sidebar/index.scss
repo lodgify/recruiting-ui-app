@@ -2,7 +2,7 @@
 @import 'modules/core/_mixins';
 
 .sidebar {
-  background-color: darken($light, 8);
+  background-color: $graySecondaryLight;
   min-height: 100vh;
   width: 350px;
 

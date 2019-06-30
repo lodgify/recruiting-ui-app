@@ -1,5 +1,6 @@
 import React from 'react';
-import { func, bool, arrayOf, shape, string } from 'prop-types';
+import { func, bool } from 'prop-types';
+import { BookingsEntityProps } from 'modules/bookings/bookingsEntityProps';
 
 import styles from './styles.scss';
 import Content from './Content';
@@ -11,7 +12,7 @@ export class Component extends React.PureComponent {
     fetchBookings: func.isRequired,
     isLoading: bool,
     hasFailed: bool,
-    data: arrayOf(shape({ guestName: string })),
+    data: BookingsEntityProps,
   };
 
   componentDidMount() {
@@ -24,7 +25,7 @@ export class Component extends React.PureComponent {
 
     return (
       <div className={styles.container}>
-        <Sidebar />
+        <Sidebar items={this.props.data} />
         <Content />
       </div>
     );
