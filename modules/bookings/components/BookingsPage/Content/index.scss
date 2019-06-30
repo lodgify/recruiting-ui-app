@@ -38,4 +38,10 @@
       background-color: darken($light, 20);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    svg {
+      display: none;
+    }
+  }
 }

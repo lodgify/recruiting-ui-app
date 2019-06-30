@@ -47,5 +47,17 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+
+      input {
+        width: 100%;
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+    }
   }
 }
