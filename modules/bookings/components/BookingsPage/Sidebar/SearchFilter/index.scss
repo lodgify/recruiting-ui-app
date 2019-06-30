@@ -1,0 +1,51 @@
+@import 'modules/core/_variables';
+
+.searchFilterContainer {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: darken($light, 10);
+
+  .searchInputContainer,
+  .filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $grayLight;
+    }
+  }
+
+  .searchInputContainer {
+    input {
+      width: 220px;
+      height: 38px;
+      padding: 5px 15px;
+      font-size: 0.9rem;
+      border: none;
+      color: darken($light, 20);
+      margin-right: -30px;
+
+      &:focus {
+        outline-color: $grayLight;
+      }
+
+      &::placeholder {
+        color: darken($light, 20);
+      }
+
+      & + svg {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

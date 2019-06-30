@@ -2,3 +2,4 @@
 /.next
 
 *.log
+**/.DS_Store
