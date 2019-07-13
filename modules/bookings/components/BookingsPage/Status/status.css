@@ -1,0 +1,44 @@
+.open {
+  color: orangered;
+  border-radius: 50%;
+  border: 1px solid orangered;
+  width: 10px;
+  height: 10px;
+  background: orangered;
+}
+
+.booked {
+  color: green;
+  border-radius: 50%;
+  border: 1px solid green;
+  width: 10px;
+  height: 10px;
+  background: green;
+}
+
+.tentative {
+  color: orange;
+  border-radius: 50%;
+  border: 1px solid orange;
+  width: 10px;
+  height: 10px;
+  background: orange;
+}
+
+.declined {
+  color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+
+.unavailable {
+  color: grey;
+  border-radius: 50%;
+  border: 1px solid grey;
+  width: 10px;
+  height: 10px;
+  background: grey;
+}
