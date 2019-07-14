@@ -1,8 +1,13 @@
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: transparent;
+@media (max-width: 640px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background: #efefef;
+    z-index: 30;
+  }
 }
 .Button {
   background: #77f1ab !important;
