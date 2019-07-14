@@ -24,8 +24,8 @@ const ListItem = ({ item, styles = '' }) => {
       />
       <BottomRow
         arrivalDate={arrivalDate}
-        people={item.people}
         styles={styles.listBottomRow}
+        people={item.people}
       />
     </li>
   );
@@ -36,10 +36,6 @@ ListItem.propTypes = {
     amountDue: PropTypes.number.isRequired,
     amountPaid: PropTypes.number.isRequired,
     currencyCode: PropTypes.string.isRequired,
-    dateArrival: PropTypes.string.isRequired,
-    dateCreated: PropTypes.string.isRequired,
-    dateDeparture: PropTypes.string.isRequired,
-    dateModified: PropTypes.string.isRequired,
     guestName: PropTypes.string,
     id: PropTypes.string,
     people: PropTypes.number.isRequired,

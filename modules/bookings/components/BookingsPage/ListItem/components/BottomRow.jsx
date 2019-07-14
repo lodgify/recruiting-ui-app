@@ -15,8 +15,8 @@ const BottomRow = ({ arrivalDate, styles = '', people }) => {
 };
 
 BottomRow.propTypes = {
-  arrivalDate: PropTypes.string.isRequired,
-  people: PropTypes.string.isRequired,
+  arrivalDate: PropTypes.string,
+  people: PropTypes.number.isRequired,
 };
 
 export default BottomRow;
