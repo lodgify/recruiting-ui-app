@@ -10,11 +10,11 @@ import differenceInDays from '../../../helpers/differenceInDays';
 // CSS
 import styles from './item.css';
 
-const ListItem = ({ item }) => {
+const ListItem = ({ item, isFirst }) => {
   const arrivalDate = formatDate(item.dateArrival);
   const days = differenceInDays(item.dateDeparture, item.dateArrival);
   return (
-    <li className={styles.listItem}>
+    <li className={isFirst ? styles.listItemFirst : styles.listItem}>
       <TopRow
         status={item.status}
         guestName={item.guestName}

@@ -8,8 +8,12 @@ const BookingList = ({ data }) => {
     <section className={styles.bookingList}>
       <Header />
       <ul>
-        {data.map(item => (
-          <ListItem key={item.id} item={item} />
+        {data.map((item, i) => (
+          <ListItem
+            isFirst={i === 0 ? true : false}
+            key={item.id}
+            item={item}
+          />
         ))}
       </ul>
     </section>
