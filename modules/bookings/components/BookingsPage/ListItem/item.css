@@ -1,11 +1,13 @@
 .listItem {
   background: transparent;
-  padding: 10px 0;
+  padding: 5px 10px;
   box-shadow: 0 1px 3px -2px grey;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+.listItemSelected {
+  background: white;
+  padding: 5px 10px;
+  box-shadow: 0 1px 3px -2px grey;
 }
 
 .listTopRow {
@@ -17,7 +19,50 @@
   display: flex;
 }
 
+.listMidRow,
+.listBottomRow {
+  margin-left: 20px;
+}
+.replied,
+.listMidRow {
+  margin-right: 7px;
+}
+
+.listMidRowReplied {
+  display: flex;
+}
+
+.listBottomRow {
+  display: flex;
+  margin-top: 5px;
+  position: relative;
+}
+
+.bottomRowColumn {
+  flex: 1;
+}
+.bottomRowColumnPill {
+  border: 1px solid #a29e9e;
+  border-radius: 10px;
+  padding: 2px 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  color: #a29e9e;
+}
+
 .guestName {
   flex: 1;
   margin-left: 10px;
+}
+
+.arrivalDate {
+  color: #a29e9e;
+  margin: 0 5px 0 0;
+}
+
+.people {
+  color: #a29e9e;
+  margin: 0 5px;
 }

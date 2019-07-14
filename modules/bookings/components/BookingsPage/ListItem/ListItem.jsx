@@ -22,12 +22,15 @@ const ListItem = ({ item }) => {
       <MidRow
         propertyId={item.propertyId}
         propertyName={item.propertyName}
-        styles={styles.listMidRow}
+        replied={item.replied}
+        styles={styles}
       />
       <BottomRow
         arrivalDate={arrivalDate}
-        styles={styles.listBottomRow}
         people={item.people}
+        amountPaid={item.amountPaid}
+        currencyCode={item.currencyCode}
+        styles={styles}
       />
     </li>
   );
