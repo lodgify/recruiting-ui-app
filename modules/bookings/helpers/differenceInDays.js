@@ -8,8 +8,8 @@
 
 const formatToComparableDate = dateString => {
   const [day, month, year] = dateString.split('/');
-
-  return new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  const comp = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+  return comp;
 };
 
 /*
@@ -21,7 +21,8 @@ const formatToComparableDate = dateString => {
  */
 
 const getAbsTime = dateString => {
-  return Math.abs(formatToComparableDate(dateString).getTime());
+  const absTime = Math.abs(new Date(dateString));
+  return absTime;
 };
 
 /*
@@ -37,7 +38,7 @@ const differenceInDays = (date1, date2) => {
   const formattedDate1 = getAbsTime(date1);
   const formattedDate2 = getAbsTime(date2);
   const diff = formattedDate1 - formattedDate2;
-  const days = Math.round(diff / (3600000 * 24));
+  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
   return days;
 };
 

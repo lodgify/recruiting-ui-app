@@ -6,11 +6,15 @@ import MidRow from './components/MidRow';
 import BottomRow from './components/BottomRow';
 // Helpers
 import formatDate from '../../../helpers/formatDate';
+import differenceInDays from '../../../helpers/differenceInDays';
 // CSS
 import styles from './item.css';
 
 const ListItem = ({ item }) => {
   const arrivalDate = formatDate(item.dateArrival);
+  const arrivalDateCompact = formatDate(item.dateArrival, 'en-US', true);
+  const departureDate = formatDate(item.dateDeparture, 'en-US', true);
+  const days = differenceInDays(departureDate, arrivalDateCompact);
   return (
     <li className={styles.listItem}>
       <TopRow
@@ -27,6 +31,7 @@ const ListItem = ({ item }) => {
       />
       <BottomRow
         arrivalDate={arrivalDate}
+        days={days}
         people={item.people}
         amountPaid={item.amountPaid}
         currencyCode={item.currencyCode}

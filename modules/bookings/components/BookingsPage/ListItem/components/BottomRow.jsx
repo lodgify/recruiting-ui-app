@@ -8,6 +8,7 @@ import formatCurrency from '../.././../../helpers/formatCurrency';
 
 const BottomRow = ({
   arrivalDate,
+  days,
   people,
   amountPaid,
   currencyCode = 'USD',
@@ -18,6 +19,7 @@ const BottomRow = ({
     <ItemRow styles={styles.listBottomRow}>
       <article className={styles.bottomRowColumn}>
         <span className={styles.arrivalDate}>{arrivalDate}</span>,
+        <span className={styles.arrivalDate}>{days}</span>
         <Moon width="10" height="14" />
         <span className={styles.people}>{people}</span>
         <Avatar width="10" height="12" />

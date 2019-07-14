@@ -1,13 +1,16 @@
 import React from 'react';
 import ListItem from '../ListItem/ListItem';
+import styles from './BookingList.css';
 
 const BookingList = ({ data }) => {
   return (
-    <ul>
-      {data.map(item => (
-        <ListItem key={item.id} item={item} />
-      ))}
-    </ul>
+    <section className={styles.bookingList}>
+      <ul>
+        {data.map(item => (
+          <ListItem key={item.id} item={item} />
+        ))}
+      </ul>
+    </section>
   );
 };
 

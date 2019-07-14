@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classes from './Button.css';
 
-const Button = ({ text = 'Create Booking', classes = '' }) => {
+const Button = ({ text = 'Create Booking', styles = '' }) => {
   return (
-    <button className={classes} aria-label={text}>
+    <button className={classes.Button || styles} aria-label={text}>
       {text}
     </button>
   );
@@ -11,7 +12,7 @@ const Button = ({ text = 'Create Booking', classes = '' }) => {
 
 Button.propTypes = {
   text: PropTypes.string,
-  classes: PropTypes.shape(),
+  styles: PropTypes.shape(),
 };
 
 export default Button;
