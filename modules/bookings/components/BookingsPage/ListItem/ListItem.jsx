@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ItemRow from '../../common/ItemRow/ItemRow';
-import Moon from '../../common/svg/Moon';
-import Avatar from '../../common/svg/Avatar';
-import Status from '../Status/Status';
+// Components
+import TopRow from './components/TopRow';
+import MidRow from './components/MidRow';
+import BottomRow from './components/BottomRow';
 // Helpers
 import formatDate from '../../../helpers/formatDate';
 
@@ -11,15 +11,22 @@ const ListItem = ({ item, styles = '' }) => {
   const arrivalDate = formatDate(item.dateArrival);
   return (
     <li>
-      <Status status={item.status}>{item.status}</Status>
-      <ItemRow className={styles.listTopRow}>{item.guestName}</ItemRow>
-      <ItemRow propertyId={item.propertyId} className={styles.listTopRow}>
-        {item.propertyName}
-      </ItemRow>
-      <ItemRow className={styles.listTopRow}>
-        <span>{arrivalDate}</span>,<Moon width="10" height="14" />
-        <span>{item.people}</span> <Avatar width="10" height="12" />
-      </ItemRow>
+      <TopRow
+        status={item.status}
+        guestName={item.guestName}
+        dateCreated={item.dateCreated}
+        styles={styles.listTopRow}
+      />
+      <MidRow
+        propertyId={item.propertyId}
+        propertyName={item.propertyName}
+        styles={styles.listTopRow}
+      />
+      <BottomRow
+        arrivalDate={arrivalDate}
+        people={item.people}
+        styles={styles.listBottomRow}
+      />
     </li>
   );
 };

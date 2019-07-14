@@ -1,6 +1,6 @@
 /*
  * Formats a date to DD-MM-YY format
- *
+ * @private
  * @param {string} dateString
  * @return {Date}
  *
@@ -14,7 +14,7 @@ const formatToComparableDate = dateString => {
 
 /*
  * Returns time in absolute num
- *
+ * @private
  * @param {string} dateString
  * @return {number}
  *
