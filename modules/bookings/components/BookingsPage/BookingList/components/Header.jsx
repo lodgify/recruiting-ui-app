@@ -4,7 +4,7 @@ import Search from '../../../common/svg/Search';
 
 const Header = () => {
   return (
-    <header classname={styles.Header}>
+    <header className={styles.Header}>
       <section className={styles.inputContainer}>
         <input type="search" placeholder="Search" />
         <Search />

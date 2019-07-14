@@ -4,7 +4,7 @@ import Button from '../../../common/Button/Button';
 
 const Footer = () => {
   return (
-    <footer classname={styles.Footer}>
+    <footer className={styles.Footer}>
       <Button styles={styles.Button} text="Create Booking" />
     </footer>
   );
