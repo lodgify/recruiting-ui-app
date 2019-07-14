@@ -1,3 +1,9 @@
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+}
 .Button {
   background: #77f1ab !important;
   color: #303030;
@@ -6,5 +12,10 @@
   padding: 10px 70px;
   border-radius: 1px;
   cursor: pointer;
-  margin-top: 5px;
+  font-weight: bold;
+  max-height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
