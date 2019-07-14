@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './Header.css';
-import Avatar from '../../../common/svg/Avatar';
+import Search from '../../../common/svg/Search';
 
 const Header = () => {
   return (
     <header classname={styles.Header}>
-      <input type="search" placeholder="Search" />
-      <Avatar />
+      <section className={styles.inputContainer}>
+        <input type="search" placeholder="Search" />
+        <Search />
+      </section>
+      <section>Icon</section>
     </header>
   );
 };
