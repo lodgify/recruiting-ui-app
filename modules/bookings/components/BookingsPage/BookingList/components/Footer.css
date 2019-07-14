@@ -1,4 +1,4 @@
-@media (max-width: 680px) {
+@media (min-width: 680px) {
   footer {
     display: flex;
     justify-content: center;
