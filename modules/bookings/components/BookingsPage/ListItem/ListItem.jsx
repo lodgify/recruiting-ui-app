@@ -6,21 +6,23 @@ import MidRow from './components/MidRow';
 import BottomRow from './components/BottomRow';
 // Helpers
 import formatDate from '../../../helpers/formatDate';
+// CSS
+import styles from './item.css';
 
-const ListItem = ({ item, styles = '' }) => {
+const ListItem = ({ item }) => {
   const arrivalDate = formatDate(item.dateArrival);
   return (
-    <li>
+    <li className={styles.listItem}>
       <TopRow
         status={item.status}
         guestName={item.guestName}
         dateCreated={item.dateCreated}
-        styles={styles.listTopRow}
+        styles={styles}
       />
       <MidRow
         propertyId={item.propertyId}
         propertyName={item.propertyName}
-        styles={styles.listTopRow}
+        styles={styles.listMidRow}
       />
       <BottomRow
         arrivalDate={arrivalDate}

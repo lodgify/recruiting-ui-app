@@ -6,15 +6,13 @@ import Status from '../../Status/Status';
 // Helpers
 import formatDate from '../../../../helpers/formatDate';
 
-const TopRow = ({ status, guestName, styles = '', dateCreated }) => {
+const TopRow = ({ status, guestName, dateCreated, styles }) => {
   const formattedDateCreated = formatDate(dateCreated, 'en-GB', true);
   return (
-    <ItemRow className={styles}>
+    <ItemRow styles={styles.listTopRow}>
       <Status status={status}>{status}</Status>
-      <article>
-        <p>{guestName}</p>
-        <p>{formattedDateCreated}</p>
-      </article>
+      <p className={styles.guestName}>{guestName}</p>
+      <p className={styles.date}>{formattedDateCreated}</p>
     </ItemRow>
   );
 };

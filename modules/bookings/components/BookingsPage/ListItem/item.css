@@ -1,0 +1,19 @@
+.listItem {
+  background: transparent;
+  padding: 10px 0;
+  box-shadow: 0 1px 3px -2px grey;
+}
+
+.listTopRow {
+  display: flex;
+  align-items: baseline;
+}
+
+.topRowInfoContainer {
+  display: flex;
+}
+
+.guestName {
+  flex: 1;
+  margin-left: 10px;
+}

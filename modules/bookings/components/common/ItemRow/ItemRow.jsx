@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ItemRow = ({ item, styles = '', propertyId = '', children }) => {
+const ItemRow = ({ item, styles, propertyId = '', children }) => {
   if (propertyId) {
     return (
-      <article data-propertyid={propertyId} className={styles.itemRow}>
+      <article data-propertyid={propertyId} className={styles}>
         {children}
       </article>
     );
   } else {
-    return <article className={styles.itemRow}>{children}</article>;
+    return <article className={styles}>{children}</article>;
   }
 };
 
