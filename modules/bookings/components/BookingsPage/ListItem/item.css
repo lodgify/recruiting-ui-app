@@ -2,6 +2,10 @@
   background: transparent;
   padding: 10px 0;
   box-shadow: 0 1px 3px -2px grey;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .listTopRow {
