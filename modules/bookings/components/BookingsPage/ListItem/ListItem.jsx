@@ -12,9 +12,7 @@ import styles from './item.css';
 
 const ListItem = ({ item }) => {
   const arrivalDate = formatDate(item.dateArrival);
-  const arrivalDateCompact = formatDate(item.dateArrival, 'en-US', true);
-  const departureDate = formatDate(item.dateDeparture, 'en-US', true);
-  const days = differenceInDays(departureDate, arrivalDateCompact);
+  const days = differenceInDays(item.dateDeparture, item.dateArrival);
   return (
     <li className={styles.listItem}>
       <TopRow
