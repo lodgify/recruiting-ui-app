@@ -41,9 +41,7 @@ export const fetchBookings = () => async dispatch => {
   try {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_START });
     const bookings = await callFetchBookings();
-    console.log('Fetching...');
     dispatch({ type: actionTypes.FETCH_BOOKINGS_SUCCESS, payload: bookings });
-    console.log(bookings);
   } catch (e) {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_FAILURE });
   }
