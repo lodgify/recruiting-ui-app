@@ -4,7 +4,7 @@ import classes from './Button.css';
 
 const Button = ({ text = 'Create Booking', styles = '' }) => {
   return (
-    <button className={classes.Button || styles} aria-label={text}>
+    <button className={styles || classes.Button} aria-label={text}>
       {text}
     </button>
   );

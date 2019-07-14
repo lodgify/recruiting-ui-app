@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from './components/Header';
+import BookingListHeader from './components/Header';
+import BookingListFooter from './components/Footer';
 import ListItem from '../ListItem/ListItem';
 import styles from './BookingList.css';
 
 const BookingList = ({ data }) => {
   return (
     <section className={styles.bookingList}>
-      <Header />
+      <BookingListHeader />
       <ul>
         {data.map((item, i) => (
           <ListItem
@@ -16,6 +17,7 @@ const BookingList = ({ data }) => {
           />
         ))}
       </ul>
+      <BookingListFooter />
     </section>
   );
 };
