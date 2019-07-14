@@ -12,7 +12,6 @@ const Button = ({ text = 'Create Booking', styles = '' }) => {
 
 Button.propTypes = {
   text: PropTypes.string,
-  styles: PropTypes.shape(),
 };
 
 export default Button;
