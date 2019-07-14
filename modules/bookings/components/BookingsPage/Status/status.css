@@ -1,44 +1,44 @@
 .open {
-  color: orangered;
+  color: var(--status-open);
   border-radius: 50%;
-  border: 1px solid orangered;
-  width: 10px;
-  height: 10px;
-  background: orangered;
+  border: 1px solid var(--status-open);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-open);
 }
 
 .booked {
-  color: green;
+  color: var(--status-booked);
   border-radius: 50%;
-  border: 1px solid green;
-  width: 10px;
-  height: 10px;
-  background: green;
+  border: 1px solid var(--status-booked);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-booked);
 }
 
 .tentative {
-  color: orange;
+  color: var(--status-tentative);
   border-radius: 50%;
-  border: 1px solid orange;
-  width: 10px;
-  height: 10px;
-  background: orange;
+  border: 1px solid var(--status-tentative);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-tentative);
 }
 
 .declined {
-  color: red;
+  color: var(--status-declined);
   border-radius: 50%;
-  border: 1px solid red;
-  width: 10px;
-  height: 10px;
-  background: red;
+  border: 1px solid var(--status-declined);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-declined);
 }
 
 .unavailable {
-  color: grey;
+  color: var(--status-unavailable);
   border-radius: 50%;
-  border: 1px solid grey;
-  width: 10px;
-  height: 10px;
-  background: grey;
+  border: 1px solid var(--status-unavailable);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-unavailable);
 }

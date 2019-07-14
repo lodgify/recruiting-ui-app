@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ItemRow = ({ item, styles = '', children }) => {
-  return <article className={styles.itemRow}>{children}</article>;
+const ItemRow = ({ item, styles = '', propertyId = '', children }) => {
+  if (propertyId) {
+    return (
+      <article data-propertyId={propertyId} className={styles.itemRow}>
+        {children}
+      </article>
+    );
+  } else {
+    return <article className={styles.itemRow}>{children}</article>;
+  }
 };
 
 ItemRow.propTypes = {
