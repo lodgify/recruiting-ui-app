@@ -12,7 +12,11 @@ const CalendarSection = () => {
       <Wrapper classes={styles.calendarWrapper}>
         <CalendarLogo />
         <Text variant="h1" styles={styles.Title} text="Reservations" />
-        <Text styles={styles.Paragraph} text="Select any reservation item" />
+        <Text
+          variant="p"
+          styles={styles.Paragraph}
+          text="Select any reservation item"
+        />
         <Button />
         <Button
           styles={styles.ButtonOverride}

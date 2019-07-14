@@ -14,8 +14,7 @@ const Text = ({ text, variant, styles }) => {
 
 Text.propTypes = {
   text: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
-  styles: PropTypes.string,
+  variant: PropTypes.string,
 };
 
 export default Text;
