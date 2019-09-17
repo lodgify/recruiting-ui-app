@@ -1,6 +1,9 @@
 <div align="center"><img alt="Lodgify" src="docs/logo.png" height="50px" /></div>
 
-This task is simple. Try to match the following design as closely as possible.
+Based on the boilerplate given to you:
+- try to recreate the list shown in the following images. 
+- try to add the search functionality so that the list is filtered by `guestName`. This should be done only in the frontend.
+
 
 | Design                     | Legend                     |
 | -------------------------- | -------------------------- |
@@ -11,6 +14,9 @@ This task is simple. Try to match the following design as closely as possible.
 1. Clone the repo.
 2. Install dependencies with `yarn`.
 3. Run the project with `yarn dev`.
+
+## Suggestion
+We will evaluate both your javascript and css. Please note that we will be paying more attention to the application behaviour so don't waste time on pixel perfection.
 
 ## Submitting your work
 
