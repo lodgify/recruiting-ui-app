@@ -1,0 +1,27 @@
+@media (min-width: 680px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background: #efefef;
+    z-index: 30;
+    height: 80px;
+  }
+}
+.Button {
+  background: #77f1ab !important;
+  color: #303030;
+  border: 0;
+  border: 1px solid #77f1ab;
+  padding: 10px 70px;
+  border-radius: 1px;
+  cursor: pointer;
+  font-weight: bold;
+  max-height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}

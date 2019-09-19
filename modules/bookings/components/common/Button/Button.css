@@ -1,0 +1,12 @@
+.Button {
+  background: transparent;
+  border: 0;
+  border: 1px solid grey;
+  padding: 10px 70px;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}

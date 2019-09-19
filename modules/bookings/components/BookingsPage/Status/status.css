@@ -1,0 +1,44 @@
+.open {
+  color: var(--status-open);
+  border-radius: 50%;
+  border: 1px solid var(--status-open);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-open);
+}
+
+.booked {
+  color: var(--status-booked);
+  border-radius: 50%;
+  border: 1px solid var(--status-booked);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-booked);
+}
+
+.tentative {
+  color: var(--status-tentative);
+  border-radius: 50%;
+  border: 1px solid var(--status-tentative);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-tentative);
+}
+
+.declined {
+  color: var(--status-declined);
+  border-radius: 50%;
+  border: 1px solid var(--status-declined);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-declined);
+}
+
+.unavailable {
+  color: var(--status-unavailable);
+  border-radius: 50%;
+  border: 1px solid var(--status-unavailable);
+  width: var(--status-circle-dimensions);
+  height: var(--status-circle-dimensions);
+  background: var(--status-unavailable);
+}

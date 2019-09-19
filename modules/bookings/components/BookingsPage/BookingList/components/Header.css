@@ -1,0 +1,19 @@
+header {
+  height: 90px;
+  padding: 10px;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.inputContainer {
+  position: relative;
+}
+input {
+  position: relative;
+  border: 0;
+  padding: 10px 5px;
+  width: 250px;
+}

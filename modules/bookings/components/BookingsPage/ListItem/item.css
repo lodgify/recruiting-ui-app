@@ -1,0 +1,68 @@
+.listItem {
+  background: transparent;
+  padding: 20px;
+  box-shadow: 0 1px 3px -2px grey;
+}
+
+.listItemFirst {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 1px 3px -2px grey;
+}
+
+.listTopRow {
+  display: flex;
+  align-items: baseline;
+}
+
+.topRowInfoContainer {
+  display: flex;
+}
+
+.listMidRow,
+.listBottomRow {
+  margin-left: 20px;
+}
+.replied,
+.listMidRow {
+  margin-right: 7px;
+}
+
+.listMidRowReplied {
+  display: flex;
+}
+
+.listBottomRow {
+  display: flex;
+  margin-top: 5px;
+  position: relative;
+}
+
+.bottomRowColumn {
+  flex: 1;
+}
+.bottomRowColumnPill {
+  border: 1px solid #a29e9e;
+  border-radius: 10px;
+  padding: 2px 30px;
+  position: relative;
+  right: 0;
+  bottom: 2px;
+  font-size: 14px;
+  color: #a29e9e;
+}
+
+.guestName {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.arrivalDate {
+  color: #a29e9e;
+  margin: 0 5px 0 0;
+}
+
+.people {
+  color: #a29e9e;
+  margin: 0 5px;
+}
