@@ -10,10 +10,15 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md}\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.24",
+    "@fortawesome/free-solid-svg-icons": "^5.11.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "faker": "^4.1.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^8.1.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

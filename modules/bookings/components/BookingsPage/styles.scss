@@ -1,0 +1,51 @@
+.GridContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: 
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main";
+}
+
+.MainPage {
+  grid-area: main;
+  align-self: center;  
+  color: var(--mid-gray); 
+  text-align: center;
+  font-family: brother-1816, sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  &_Title {
+    font-size: 2.5em; 
+    font-weight: lighter;
+  }
+}
+
+.Sidebar {
+  overflow-y: auto;
+  height: 100vh;
+  grid-area: sidebar;
+}
+
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent; 
+}
+
+.Reservation {
+  background-color: var(--silver); 
+  padding: 1em; 
+  border-bottom: 0.5px solid var(--mid-gray);
+  font-size: 0.7em;
+  color: var(--dark-gray);
+  &_GuestName {
+    font-weight: bold; 
+  }
+  &_BookingDate {
+    float: right;
+  }
+}
+
+.Reservation:hover {
+  background-color: var(--light-gray); 
+}
