@@ -3,10 +3,11 @@ import { MODULE_NAME } from './constants';
 
 export const DUCKS_NAME = 'bookings';
 
-const actionTypes = {
+export const actionTypes = {
   FETCH_BOOKINGS_START: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_START`,
   FETCH_BOOKINGS_SUCCESS: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_SUCCESS`,
   FETCH_BOOKINGS_FAILURE: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_FAILURE`,
+  FILTER_BOOKINGS: `${MODULE_NAME}/${DUCKS_NAME}/FILTER_BOOKINGS`,
 };
 
 const initialState = {
@@ -25,7 +26,8 @@ export const reducer = (state = initialState, action) => {
     };
   }
 
-  if (action.type === actionTypes.FETCH_BOOKINGS_SUCCESS) {
+  if (action.type === actionTypes.FETCH_BOOKINGS_SUCCESS || action.type === actionTypes.FILTER_BOOKINGS) {
+    console.log(action.type)
     return {
       ...state,
       isLoading: false,
@@ -46,3 +48,17 @@ export const fetchBookings = () => async dispatch => {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_FAILURE });
   }
 };
+
+export const filterBookings = (bookings, filteredGuest) => {
+  console.log(filteredGuest)
+  let searchResult = bookings.filter((user) => user.guestName === filteredGuest)
+  
+  async dispatch => {
+    try {
+      console.log('dispatch')
+      dispatch({ type: actionTypes.FILTER_BOOKINGS, payload: searchResult })
+    }catch (e) {
+      console.log('error')
+    }
+  }
+}

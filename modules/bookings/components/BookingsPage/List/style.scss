@@ -1,0 +1,58 @@
+.Scroll {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.Footer {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    text-align: center;
+    background-color: var(--silver);
+    border-top: 0.5px solid rgba(var(--dark-gray), 0.2);
+
+    &_Labels {
+        border-bottom: 0.5px solid rgba(var(--dark-gray), 0.2);
+        padding: 0.8em 2em;
+        font-size: 0.7em;
+        color: rgba(var(--dark-gray), 1);
+
+        >label {
+            float: left;
+        }
+    }
+
+    &_Button {
+        margin: 1em;
+        background-color: var(--light-green);
+
+        >a {
+            padding: 1em;
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: bold;
+            color: black;
+            font-family: brother-1816, sans-serif;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.Search {
+    position: absolute;
+    top: 0;
+    text-align: center;
+
+    form {
+        float: left;
+        width: 80%;
+    }
+
+    font-awesome-icon {
+        float: right;
+    }
+}

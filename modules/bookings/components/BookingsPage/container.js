@@ -8,11 +8,11 @@ const mapStateToProps = state => ({
   data: state.bookings.data,
 });
 
-const mapDispathToProps = {
+const mapDispatchToProps = {
   fetchBookings,
 };
 
 export const Container = connect(
   mapStateToProps,
-  mapDispathToProps,
+  mapDispatchToProps,
 )(Component);

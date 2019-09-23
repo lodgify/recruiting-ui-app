@@ -2,7 +2,7 @@ import React from 'react';
 import { func, bool, arrayOf, shape, string } from 'prop-types';
 import styles from './styles.scss';
 import MainPage from './MainPage';
-import GuestList from './GuestList'; 
+import BookingsList from './List/BookingsList'; 
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
@@ -24,7 +24,7 @@ export class Component extends React.PureComponent {
 
     return (
       <div className={styles.GridContainer}>
-        <GuestList users={this.props.data} />
+        <BookingsList users={this.props.data} />
         <MainPage />
       </div>
     );

@@ -1,70 +1,92 @@
 .GridContainer {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-areas: 
-    "sidebar main main main"
-    "sidebar main main main"
-    "sidebar main main main";
+  grid-template-columns: 300px auto;
 }
 
 .MainPage {
-  grid-area: main;
-  align-self: center;  
-  color: var(--mid-gray); 
+  align-self: center;
+  color: var(--mid-gray);
   text-align: center;
   font-family: brother-1816, sans-serif;
   font-style: normal;
   font-weight: lighter;
+
   &_Title {
-    font-size: 2.5em; 
+    font-size: 2.5em;
     font-weight: lighter;
+    margin-bottom: 0.5em;
   }
-}
 
-.Sidebar {
-  overflow-y: auto;
-  height: 100vh;
-  grid-area: sidebar;
-}
+  &_Instruction {
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+  }
 
-::-webkit-scrollbar {
-  width: 0px; 
-  background: transparent; 
+  &_Button {
+    margin: 0.6em;
+    width: 100%;
+    text-align: center;
+
+    >div {
+      display: inline-block;
+      width: 25%;
+      border: 1px solid rgba(var(--dark-gray), 1);
+      padding: 0.5em;
+      width: 25%;
+
+      >a {
+        font-size: 0.7em;
+        font-weight: bold;
+        color: rgba(var(--dark-gray), 1);
+        font-family: brother-1816, sans-serif;
+      }
+    }
+  }
 }
 
 .Reservation {
-  background-color: var(--silver); 
-  padding: 1.5em; 
+  display: grid;
+  grid-template-columns: 10% auto;
+  background-color: var(--silver);
+  padding: 1.5em;
   border-bottom: 0.5px solid rgba(var(--dark-gray), 0.2);
   font-size: 0.7em;
+
   &_GuestName {
     color: rgba(var(--dark-gray), 1);
-    font-weight: bold; 
+    font-weight: bold;
   }
+
   &_BookingDate {
     color: rgba(var(--dark-gray), 1);
     float: right;
   }
+
   &_PropertyName {
     span {
       color: rgba(var(--dark-gray), 1);
     }
   }
+
   &_ArrivalInfo {
-    padding-top: 5px; 
+    padding-top: 5px;
+
     span {
       color: rgba(var(--dark-gray), 0.5);
     }
   }
+
   &_Amount {
     margin-top: -5px;
-    padding: 2px 10px; 
+    padding: 2px 10px;
     float: right;
     border: 0.5px solid var(--mid-gray);
     border-radius: 20px;
   }
 }
 
+
+
 .Reservation:hover {
-  background-color: var(--light-gray); 
+  background-color: var(--light-gray);
 }
