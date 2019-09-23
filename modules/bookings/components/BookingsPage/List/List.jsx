@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Reservation from '../Reservation';
+import BookingsListReservation from './Reservation/Reservation';
 import style from './style.scss';
 import { filterBookings } from '../../../ducks.js';
 import { connect } from 'react-redux';
@@ -14,7 +14,7 @@ class BookingsList extends Component {
                 <Search className={style.Search} users={this.props.users} />
             </div>
             <div className={style.Scroll}>
-                {this.props.users.map((booking, i) => (<Reservation key={`item_${i}`} user={booking} />))}
+                {this.props.users.map((booking, i) => (<BookingsListReservation key={`item_${i}`} user={booking} />))}
             </div>
             <div className={style.Footer}>
                 <div className={style.Footer_Labels}>

@@ -1,0 +1,46 @@
+.Reservation {
+    display: grid;
+    grid-template-columns: 10% auto;
+    background-color: var(--silver);
+    padding: 1.5em;
+    border-bottom: 0.5px solid rgba(var(--dark-gray), 0.2);
+    font-size: 0.7em;
+
+    &_GuestName {
+        color: rgba(var(--dark-gray), 1);
+        font-weight: bold;
+    }
+
+    &_BookingDate {
+        color: rgba(var(--dark-gray), 1);
+        float: right;
+    }
+
+    &_PropertyName {
+        span {
+            color: rgba(var(--dark-gray), 1);
+        }
+    }
+
+    &_ArrivalInfo {
+        padding-top: 5px;
+
+        span {
+            color: rgba(var(--dark-gray), 0.5);
+        }
+    }
+
+    &_Amount {
+        margin-top: -5px;
+        padding: 2px 10px;
+        float: right;
+        border: 0.5px solid var(--mid-gray);
+        border-radius: 20px;
+    }
+}
+
+
+
+.Reservation:hover {
+    background-color: var(--light-gray);
+}

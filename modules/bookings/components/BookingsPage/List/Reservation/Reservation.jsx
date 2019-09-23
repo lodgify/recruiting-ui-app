@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import styles from './styles.scss';
+import style from './style.scss';
 import moment from 'moment'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReply, faUser, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 
-class Reservation extends Component {
+class BookingsListReservation extends Component {
     render() {
         let createdDate = this.props.user.dateCreated.toLocaleDateString();
         let arrivalDate = moment(this.props.user.dateArrival).format('MMM DD YYYY');
@@ -35,24 +35,24 @@ class Reservation extends Component {
             borderRadius: `50%`,
             display: `inline-block`
         };
-        return <div className={styles.Reservation}>
+        return <div className={style.Reservation}>
             <div>
                 <span style={dotStyle}></span>
             </div>
             <div>
-                <span className={styles.Reservation_GuestName}>{this.props.user.guestName}</span>
-                <span className={styles.Reservation_BookingDate}>{createdDate}</span>
+                <span className={style.Reservation_GuestName}>{this.props.user.guestName}</span>
+                <span className={style.Reservation_BookingDate}>{createdDate}</span>
             </div>
             <div>
                 <FontAwesomeIcon icon={faReply} />
             </div>
-            <div className={styles.Reservation_PropertyName}>
+            <div className={style.Reservation_PropertyName}>
                 <span>{this.props.user.propertyName}</span>
             </div>
             <div></div>
-            <div className={styles.Reservation_ArrivalInfo}>
+            <div className={style.Reservation_ArrivalInfo}>
                 <span >{arrivalDate}, {nights} <FontAwesomeIcon icon={faMoon} />, {this.props.user.people} <FontAwesomeIcon icon={faUser} /></span>
-                <div className={styles.Reservation_Amount}>
+                <div className={style.Reservation_Amount}>
                     <span>{amount}</span>
                 </div>
             </div>
@@ -60,4 +60,4 @@ class Reservation extends Component {
     }
 }
 
-export default Reservation; 
+export default BookingsListReservation; 
