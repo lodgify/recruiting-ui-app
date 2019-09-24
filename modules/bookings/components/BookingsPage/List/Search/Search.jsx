@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import { faFilter, faSearch } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import { func, bool, arrayOf, shape, string } from 'prop-types';
+import style from './style.scss'; 
 
 class BookingsListSearch extends Component {
     static displayName = 'BookingsListSearch';
@@ -31,14 +32,14 @@ class BookingsListSearch extends Component {
 
     render() {
         return (
-            <div>
+            <div className={style.Search}>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
                         <input type="text" value={this.state.value}
+                            placeholder='Search'
                             onChange={this.handleChange} />
-                    </label>
+                            <FontAwesomeIcon icon={faSearch} className={style.Search_Search}/>
                 </form>
-                <FontAwesomeIcon icon={faFilter} style={{ float: 'right' }} />
+                <FontAwesomeIcon icon={faFilter} className={style.Search_Filter}/>
             </div>
         );
     }

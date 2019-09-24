@@ -1,0 +1,33 @@
+.Search {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    background-color: var(--silver);
+    border-bottom: 0.5px solid rgba(var(--dark-gray), 0.2);
+
+    form {
+        width: 239px;
+        float: left;
+        margin: 0.8em 0em 0.8em 0.8em;
+        background-color: white; 
+
+        input {
+            width: 85%;
+            border: none;
+            padding: 0.7em;
+            font-size: 0.8em;
+            color: rgba(var(--dark-gray), 1);
+        }
+    }
+    &_Search {
+        float: right;
+        color: var(--mid-gray);
+        margin: 0.5em;
+    }
+
+    &_Filter {
+        float: right;
+        margin: 1.3em 1em;
+        color: var(--mid-gray);
+    }
+}

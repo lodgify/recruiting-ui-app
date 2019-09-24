@@ -1,10 +1,11 @@
 .GridContainer {
     display: grid; 
+    grid-template-rows: 3em calc(100vh - 6em) auto; 
 }
 
 .Scroll {
     overflow-y: auto;
-    height: 100vh;
+    height: calc(100vh - 6em);
 }
 
 .Footer {
@@ -44,19 +45,4 @@
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-}
-
-.Search {
-    position: absolute;
-    top: 0;
-    text-align: center;
-
-    form {
-        float: left;
-        width: 80%;
-    }
-
-    font-awesome-icon {
-        float: right;
-    }
 }

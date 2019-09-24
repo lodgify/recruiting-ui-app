@@ -6,12 +6,11 @@ import BookingsListSearch from './Search/Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
-
 class BookingsList extends Component {
     render() {
-        return <div >
+        return <div className={style.GridContainer}>
             <div>
-                <BookingsListSearch className={style.Search} users={this.props.users} filterBookings={this.props.filterBookings} />
+                <BookingsListSearch users={this.props.users} filterBookings={this.props.filterBookings} />
             </div>
             <div className={style.Scroll}>
                 {this.props.filteredBooking.map((booking, i) => (<BookingsListReservation key={`item_${i}`} user={booking} />))}
