@@ -8,9 +8,11 @@ export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
   static propTypes = {
     fetchBookings: func.isRequired,
+    filterBookings: func.isRequired,
     isLoading: bool,
     hasFailed: bool,
     data: arrayOf(shape({ guestName: string })),
+    filteredData: arrayOf(shape({ guestName: string })),
   };
 
   componentDidMount() {
@@ -24,7 +26,7 @@ export class Component extends React.PureComponent {
 
     return (
       <div className={styles.GridContainer}>
-        <BookingsList users={this.props.data} />
+        <BookingsList users={this.props.data} filteredBooking={this.props.filteredData} filterBookings={this.props.filterBookings} />
         <BookingsMainPage />
       </div>
     );

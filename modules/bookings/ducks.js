@@ -23,6 +23,7 @@ export const reducer = (state = initialState, action) => {
       isLoading: true,
       hasFailed: false,
       data: null,
+      filteredData: null
     };
   }
 
@@ -32,7 +33,8 @@ export const reducer = (state = initialState, action) => {
       ...state,
       isLoading: false,
       hasFailed: false,
-      data: [...action.payload],
+      data: [...action.payload.bookings],
+      filteredData: [...action.payload.filtered]
     };
   }
 
@@ -43,22 +45,21 @@ export const fetchBookings = () => async dispatch => {
   try {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_START });
     const bookings = await callFetchBookings();
-    dispatch({ type: actionTypes.FETCH_BOOKINGS_SUCCESS, payload: bookings });
+    dispatch({ type: actionTypes.FETCH_BOOKINGS_SUCCESS, payload: {bookings: bookings, filtered: bookings }});
   } catch (e) {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_FAILURE });
   }
 };
 
-export const filterBookings = (bookings, filteredGuest) => {
-  console.log(filteredGuest)
-  let searchResult = bookings.filter((user) => user.guestName === filteredGuest)
-  
-  async dispatch => {
-    try {
-      console.log('dispatch')
-      dispatch({ type: actionTypes.FILTER_BOOKINGS, payload: searchResult })
-    }catch (e) {
-      console.log('error')
+export const filterBookings = (bookings, filteredGuest) => async dispatch => {
+  try {
+    let searchResult = [...bookings]
+    let regExp = new RegExp(`.*${filteredGuest}.*`, 'i')
+    if (filteredGuest.length > 0) {
+      searchResult = bookings.filter((user) => user.guestName.match(regExp))
     }
+    dispatch({ type: actionTypes.FILTER_BOOKINGS, payload: {bookings: bookings, filtered:searchResult }})
+  } catch (e) {
+    console.log('error')
   }
 }
