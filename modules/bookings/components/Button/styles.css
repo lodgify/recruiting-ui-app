@@ -1,0 +1,17 @@
+.button {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+}
+
+.button.solid {
+  border: none;
+  background-color: #77f0ab;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+}
