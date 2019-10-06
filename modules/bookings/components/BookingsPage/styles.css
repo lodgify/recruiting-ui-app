@@ -1,3 +1,31 @@
-.Title {
-  color: #f00;
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.list {
+  min-width: 200px;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2em;
+  color: #9a9a9a;
+}
+
+.buttonGroup {
+  width: 100%;
+  max-width: 350px;
+}
+
+.buttonGroup * {
+  margin: 10px 0;
 }
