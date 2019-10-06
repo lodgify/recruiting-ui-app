@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #a9a9a6;
+}
