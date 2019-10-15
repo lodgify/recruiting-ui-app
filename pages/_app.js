@@ -1,10 +1,10 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 
-import withReduxStore from '../lib/withReduxStore';
+import withReduxStore from 'lib/withReduxStore';
 import { Provider } from 'react-redux';
 
-import '../modules/core/global.css';
+import 'modules/core/global.css';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

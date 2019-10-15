@@ -1,3 +1,170 @@
 .Title {
   color: #f00;
 }
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.reservationsLayout {
+  display: flex;
+  flex: 8;
+  align-items: center;
+  background-color: #f0f0ec;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex: 2;
+  background-color: #eaeae4;
+  flex-direction: column;
+  height: 100%;
+}
+
+.reservationText {
+  font-size: 22px;
+}
+
+.optionsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  border-top-color: lightgray;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  min-height: 50px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.searchIconStyle {
+  padding: 12px;
+  background-color: white;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+  min-height: 42px;
+}
+
+.filterIconPosition {
+  margin-left: 10px;
+}
+
+.listItemContainer {
+  padding: 20px;
+  display: flex;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  flex-direction: row;
+}
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 3px;
+}
+
+.listItemBody {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.propertyName {
+  font-size: 12px;
+}
+
+.select {
+  font-size: 12px;
+}
+
+.createBooking {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bookingDate {
+  color: gray;
+  font-size: 12px;
+}
+
+.guestName {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createBookingButton {
+  background-color: #76f0aa;
+  margin: 20px;
+  outline-style: none;
+  border-color: transparent;
+  min-height: 40px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-color: transparent;
+}
+
+.paidAmountContainer {
+  border-color: gray;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+
+.paidAmount {
+  color: gray;
+  text-align: center;
+  font-size: 10px;
+}
+
+.listContainer {
+  flex: 5;
+  overflow: scroll;
+}
+
+.bookingButton {
+  background-color: transparent;
+  outline: none;
+  border-color: gray;
+  border-style: solid;
+  height: 50px;
+  min-width: 350px;
+}
