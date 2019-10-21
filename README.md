@@ -1,3 +1,7 @@
+## Notes by Iván
+
+Run tests with `yarn test`
+
 <div align="center"><img alt="Lodgify" src="docs/logo.png" height="50px" /></div>
 
 Based on the boilerplate given to you:

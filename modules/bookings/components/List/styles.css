@@ -1,0 +1,10 @@
+.list.no-scrollbars {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list.no-scrollbars::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

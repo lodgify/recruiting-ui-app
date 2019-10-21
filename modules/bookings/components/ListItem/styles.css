@@ -1,0 +1,93 @@
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+  border-top: 1px solid #dbdbd8;
+}
+
+.status {
+  padding-right: 10px;
+  margin-right: auto;
+  font-size: 10px;
+  color: #aeaeab;
+}
+
+.statusCircle {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.statusCircle.booked {
+  background-color: #b6e673;
+}
+
+.statusCircle.declined {
+  background-color: #ffb5ad;
+}
+
+.statusCircle.unavailable {
+  background-color: #c1c9c6;
+}
+
+.statusCircle.tentativeOrOpen {
+  background-color: #f0c985;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+}
+
+.guestName {
+  flex: 1;
+  font-weight: bold;
+}
+
+.dateCreated {
+  margin-left: auto;
+}
+
+.subheader {
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.details {
+  display: flex;
+  font-size: 0.9em;
+  color: #aeaeab;
+}
+
+.mainDetails {
+  flex: 1;
+}
+
+.currencyDetails {
+  margin-left: auto;
+}
+
+.people,
+.nights {
+  margin-left: 10px;
+}
+
+.people .icon,
+.nights .icon {
+  margin-left: 3px;
+}
+
+.paidAmount {
+  padding: 3px 5px;
+  border: 1px solid #aeaeab;
+  border-radius: 30%;
+}
