@@ -1,6 +1,5 @@
-import { BookingsPage } from '../modules/bookings';
+import { Bookings } from 'components/Bookings';
 
-const Component = () => <BookingsPage />;
-Component.displayName = 'IndexPage';
+const Home = () => <Bookings />;
 
-export default Component;
+export default Home;

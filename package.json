@@ -1,32 +1,42 @@
 {
-  "name": "@lodgify-private/recruiting-ui-app",
-  "version": "0.0.0-development",
-  "description": "A task used during the recruiting process at Lodgify inspired by `lodgify-app`.",
-  "repository": "https://github.com/lodgify/recruiting-ui-app",
+  "name": "lodgify",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "lint": "eslint pages modules --ext .js,.jsx",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md}\""
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.21",
+    "@emotion/styled": "^10.0.17",
+    "@material-ui/styles": "^4.5.0",
     "@zeit/next-css": "^1.0.1",
+    "emotion": "^10.0.17",
     "faker": "^4.1.0",
-    "isomorphic-unfetch": "^3.0.0",
-    "next": "^8.1.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "next": "9.1.1",
+    "next-fonts": "^0.19.0",
+    "next-redux-saga": "^4.0.2",
+    "next-redux-wrapper": "^4.0.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1"
   },
   "devDependencies": {
-    "@svgr/webpack": "^4.2.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
-    "prettier": "^1.17.0"
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-emotion": "^10.0.21",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "redux-devtools-extension": "^2.13.8",
+    "url-loader": "^2.2.0"
   }
 }
