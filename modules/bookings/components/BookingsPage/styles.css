@@ -1,3 +1,23 @@
 .Title {
   color: #f00;
 }
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.GridItem {
+  padding: 10px;
+}
+.ListSection {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.ListSection > ul {
+  margin: 0;
+  padding: 0;
+}
+.MainSection {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
