@@ -12,6 +12,7 @@
 .ListSection {
   grid-column-start: 1;
   grid-column-end: 2;
+  height: calc(100vh - 40px);
 }
 .ListSection > ul {
   margin: 0;

@@ -1,0 +1,9 @@
+.BookingListItem {
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 0px;
+}
+
+.DateCreated {
+  float: right;
+  color: #ababab;
+}
