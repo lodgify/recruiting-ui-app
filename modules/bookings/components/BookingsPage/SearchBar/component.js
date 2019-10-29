@@ -4,14 +4,19 @@ import PropTypes from 'prop-types';
 import styles from './styles.css';
 
 const propTypes = {
-  // fetchBookings: func.isRequired
+  onChange: PropTypes.func.isRequired
 };
 
-const SearchBar = () => {
-  return <div className={styles.SearchBar}>
-    <input type="text" name="search" />
-    <button>filter</button>
-  </div>;
+const SearchBar = ({ onChange }) => {
+  return (
+    <div className={styles.SearchBar}>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={e => onChange(e.target.value)}
+      />
+    </div>
+  );
 };
 
 SearchBar.displayName = 'SearchBar';

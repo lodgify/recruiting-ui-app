@@ -1,9 +1,29 @@
 .BookingListItem {
   border-bottom: 1px solid #dddddd;
-  padding: 5px 0px;
+  padding: 5px 0;
 }
 
 .DateCreated {
   float: right;
   color: #ababab;
+}
+
+.AmountPaid {
+  border: 1px solid #ababab;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.BookingsListItemFooter {
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+}
+.BookingsListItemFooter span{
+  float: left;
+}
+.BookingsListItemFooter span:last-child{
+  float: right;
 }

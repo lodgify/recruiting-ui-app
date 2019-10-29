@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './styles.css';
-import { dateFormatter } from '../../../utils/timeUtils';
+import { dateDiffByDay, dateFormatter } from '../../../utils/timeUtils';
 
 const propTypes = {
   dateArrival: PropTypes.object,
@@ -17,14 +16,15 @@ const withStringifiedDates = ({
   dateDeparture,
   dateModified,
   ...rest
+// eslint-disable-next-line react/display-name
 }) => WrappedComponent => {
   return (
     <WrappedComponent
       {...rest}
       key={rest.id}
+      stayNights={dateDiffByDay(dateArrival, dateDeparture)}
       dateArrival={dateFormatter(dateArrival)}
       dateCreated={dateFormatter(dateCreated)}
-      dateDeparture={dateFormatter(dateDeparture)}
       dateModified={dateFormatter(dateModified)}
     />
   );

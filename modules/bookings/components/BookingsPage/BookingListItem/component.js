@@ -19,16 +19,20 @@ const propTypes = {
   read: PropTypes.bool,
   replied: PropTypes.bool,
   status: PropTypes.string,
-  totalAmount: PropTypes.number
+  totalAmount: PropTypes.number,
+  stayNights: PropTypes.number
 };
 
-const BookingsListItem = ({ guestName, propertyName, dateArrival, dateCreated }) => {
+const BookingsListItem = ({ amountPaid, guestName, propertyName, people, dateArrival, dateCreated, stayNights }) => {
   return (
     <li className={styles.BookingListItem}>
       <strong>{guestName}</strong>
       <span className={styles.DateCreated}>{dateCreated}</span>
       <p>{propertyName}</p>
-      <span>{dateArrival}</span>
+      <div className={styles.BookingsListItemFooter}>
+        <span>{dateArrival} |</span><span>{stayNights} night|</span><span>{people} person</span>
+        <span className={styles.AmountPaid}>{amountPaid}</span>
+      </div>
     </li>
   );
 };
