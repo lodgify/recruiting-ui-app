@@ -45,9 +45,9 @@ const BookingItem = ({ booking, setSelectedBooking, selectedBooking }) => {
           </span>
           <span> {booking.people} people</span>
         </div>
-        <div>
+        <span className={styles.Currency}>
           {booking.amountPaid} {booking.currencyCode}
-        </div>
+        </span>
       </div>
     </div>
   );

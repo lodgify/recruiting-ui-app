@@ -29,5 +29,11 @@
     background-color: orange;
 }
 .Unavailable {
-    background-color: darkgray;
+    background-color: gray;
+}
+.Currency {
+    border: .5px solid black;
+    border-radius: 5px;
+    padding: .2rem;
+
 }
