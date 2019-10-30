@@ -1,0 +1,30 @@
+.BookingItem {
+    margin: 1.5rem;
+    border-bottom: 1px solid grey
+}
+.Row {
+    display: flex;
+    justify-content: space-between; 
+    padding-bottom: .5rem; 
+}
+.StatusIndicator {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+.GuestName {
+    font-weight: bold;
+}
+.Green {
+    background-color: green;
+}
+.Red {
+    background-color: red;
+}
+.Orange {
+    background-color: orange;
+}
+.Unavailable {
+    background-color: darkgray;
+}
