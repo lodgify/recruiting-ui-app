@@ -25,7 +25,9 @@ export class Component extends React.PureComponent {
     return (
       <div className={styles.BookingPage}>
         <BookingList className={styles.BookingList} data={this.props.data} />
-        <div className={styles.BookingPane}>whats in here</div>
+        <div className={styles.BookingPane}>
+          <CalendarLogo></CalendarLogo>
+        </div>
       </div>
     );
   }
