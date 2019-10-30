@@ -1,3 +1,66 @@
 .Title {
   color: #f00;
 }
+
+.MainContainer {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-columns: 25% 1fr;
+}
+
+.MainSection {
+  display: grid;
+  height: 100vh;
+}
+
+.WelcomeContainer {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.FilterContainer {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+}
+
+.SearchBox {
+  margin: auto;
+  padding-left: 20px;
+}
+
+.Center {
+  margin: auto;
+  text-align: center;
+}
+
+.SidebarContainer {
+  display: grid;
+  grid-template-rows: 1fr 8fr 2fr;
+  height: 100vh;
+  overflow: hidden;
+  background: #ebebe5;
+}
+
+.BookingsContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.SelectContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 10px;
+  border-top: 1px solid rgb(212, 212, 212);
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.BookButton {
+  height: 60px;
+  width: 80%;
+  margin: 10%;
+  font-weight: bold;
+  background-color: #76f0ab;
+  border: none;
+}
