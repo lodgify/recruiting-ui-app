@@ -23,9 +23,10 @@ export class Component extends React.PureComponent {
     if (this.props.hasFailed || !this.props.data) return 'Failed :(';
 
     return (
-      <>
-        <BookingList data={this.props.data} />
-      </>
+      <div className={styles.BookingPage}>
+        <BookingList className={styles.BookingList} data={this.props.data} />
+        <div className={styles.BookingPane}>whats in here</div>
+      </div>
     );
   }
 }
