@@ -5,7 +5,7 @@ import { format, differenceInCalendarDays } from 'date-fns';
 import styles from './styles.css';
 import ReplyIcon from '../../../../static/reply.svg';
 
-const BookingItem = ({ booking }) => {
+const BookingItem = ({ booking, setSelectedBooking, selectedBooking }) => {
   const bookingStatus = {
     Booked: 'Green',
     Unavailable: 'Gray',
@@ -15,7 +15,7 @@ const BookingItem = ({ booking }) => {
   };
 
   return (
-    <div className={styles.BookingItem}>
+    <div className={`${styles.BookingItem} ${selectedBooking === booking.id ? styles.IsSelected : ''}`} onClick={() => setSelectedBooking(booking.id)}>
       <div className={styles.Row}>
         <div className={styles.GuestName}>
           <div

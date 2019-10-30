@@ -2,6 +2,9 @@
     margin: 1.5rem;
     border-bottom: 1px solid grey
 }
+.IsSelected {
+    background-color: white;
+}
 .Row {
     display: flex;
     justify-content: space-between; 
