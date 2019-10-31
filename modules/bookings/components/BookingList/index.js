@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BookingItem from '../BookingItem';
+import './styles.css';
 
 export default function BookingList({ bookings }) {
   return (
