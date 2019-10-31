@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SearchIcon from '../../../../static/search.svg';
 import styles from './styles.css';
 
-export default function SearchBox(props) {
-  const [searchTerm, setSearchTerm] = useState('');
+export default function SearchBox({ onChange, className }) {
   return (
-    <div className={`${styles.SearchBox} ${props.className}`}>
+    <div className={`${styles.SearchBox} ${className}`}>
       <input
         placeholder="Search"
         type="text"
-        value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
+        onChange={e => onChange(e.target.value)}
       />
       <SearchIcon />
     </div>
@@ -20,4 +18,5 @@ export default function SearchBox(props) {
 
 SearchBox.propTypes = {
   className: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
 };

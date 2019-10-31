@@ -7,15 +7,17 @@ import DownloadIcon from '../../../../static/download.svg';
 import ReloadIcon from '../../../../static/reload.svg';
 import styles from './styles.css';
 import SearchBox from '../../../common/components/SearchBox';
-import BookingItem from '../BookingItem';
+import BookingList from '../BookingList';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
   static propTypes = {
     fetchBookings: func.isRequired,
+    updateSearchTerm: func.isRequired,
     isLoading: bool,
     hasFailed: bool,
     data: arrayOf(shape({ guestName: string })),
+    searchTerm: string,
   };
 
   componentDidMount() {
@@ -30,15 +32,20 @@ export class Component extends React.PureComponent {
       <div className={styles.MainContainer}>
         <div className={styles.SidebarContainer}>
           <div className={styles.FilterContainer}>
-            <SearchBox className={styles.SearchBox} />
+            <SearchBox
+              className={styles.SearchBox}
+              onChange={this.props.updateSearchTerm}
+            />
             <FilterIcon className={styles.Center} />
           </div>
           <div className={styles.BookingsContainer}>
-            <ul>
-              {this.props.data.map(booking => (
-                <BookingItem key={booking.id} booking={booking} />
-              ))}
-            </ul>
+            <BookingList
+              bookings={this.props.data.filter(booking =>
+                booking.guestName
+                  .toLowerCase()
+                  .includes(this.props.searchTerm.toLowerCase()),
+              )}
+            />
           </div>
           <div className={styles.Footer}>
             <div className={styles.SelectContainer}>

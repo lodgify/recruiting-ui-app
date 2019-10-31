@@ -7,12 +7,14 @@ const actionTypes = {
   FETCH_BOOKINGS_START: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_START`,
   FETCH_BOOKINGS_SUCCESS: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_SUCCESS`,
   FETCH_BOOKINGS_FAILURE: `${MODULE_NAME}/${DUCKS_NAME}/FETCH_BOOKINGS_FAILURE`,
+  UPDATE_SEARCH_TERM: `${MODULE_NAME}/${DUCKS_NAME}/UPDATE_SEARCH_TERM`,
 };
 
 const initialState = {
   isLoading: false,
   hasFailed: false,
   data: null,
+  searchTerm: '',
 };
 
 export const reducer = (state = initialState, action) => {
@@ -34,6 +36,13 @@ export const reducer = (state = initialState, action) => {
     };
   }
 
+  if (action.type === actionTypes.UPDATE_SEARCH_TERM) {
+    return {
+      ...state,
+      searchTerm: action.payload,
+    };
+  }
+
   return state;
 };
 
@@ -45,4 +54,8 @@ export const fetchBookings = () => async dispatch => {
   } catch (e) {
     dispatch({ type: actionTypes.FETCH_BOOKINGS_FAILURE });
   }
+};
+
+export const updateSearchTerm = value => async dispatch => {
+  dispatch({ type: actionTypes.UPDATE_SEARCH_TERM, payload: value });
 };
