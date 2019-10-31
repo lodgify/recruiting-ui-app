@@ -7,6 +7,7 @@ import DownloadIcon from '../../../../static/download.svg';
 import ReloadIcon from '../../../../static/reload.svg';
 import styles from './styles.css';
 import SearchBox from '../../../common/components/SearchBox';
+import BookingItem from '../BookingItem';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
@@ -35,7 +36,7 @@ export class Component extends React.PureComponent {
           <div className={styles.BookingsContainer}>
             <ul>
               {this.props.data.map(booking => (
-                <li key={booking.guestName}>{booking.guestName}</li>
+                <BookingItem key={booking.id} booking={booking} />
               ))}
             </ul>
           </div>

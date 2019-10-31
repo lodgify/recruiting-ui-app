@@ -1,0 +1,37 @@
+.BookingItem {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 7fr 2fr;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+}
+
+.BookingItem div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Center {
+  margin: auto;
+  text-align: center;
+}
+
+.Title {
+  font-weight: bold;
+}
+
+.Details {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.Price {
+  grid-row-start: 3;
+  grid-column-start: 3;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
