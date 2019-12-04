@@ -26,11 +26,18 @@ export class Component extends React.PureComponent {
       <div className={styles.Page}>
         <div className={styles.Main}>
           <CalendarLogo />
+          <h1>Reservations</h1>
+          <p>Select any reservation item</p>
+
+          <div className={styles.buttons}>
+            <button>Create Booking</button>
+            <button>Create Booking with Quote</button>
+          </div>
         </div>
 
-        <div className={styles.ListWrapper}>{
-          <BookingList data={this.props.data} />
-        }</div>
+        <div className={styles.Sidebar}>
+          { <BookingList data={this.props.data} /> }
+        </div>
       </div>
     );
   }

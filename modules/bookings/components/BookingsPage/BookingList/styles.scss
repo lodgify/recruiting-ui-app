@@ -1,3 +1,41 @@
+.ListWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 12px;
+
+  svg {
+    margin: 0 2px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.Filter {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #ebebe5;
+
+  input {
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  svg {
+    margin-left: 15px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.List {
+  overflow-y: auto;
+  height: 100%;
+}
+
 .ListItem {
   display: grid;
   grid-template-areas:
@@ -9,13 +47,10 @@
   align-items: flex-end;
   padding: 20px;
   max-height: 100px;
-  font-size: 12px;
-  color: #888;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 
   &:hover {
     background-color: #efefef;
-    cursor: pointer;
   }
 
   &.active {
@@ -79,19 +114,11 @@
 .dates {
   grid-area: dates;
   display: flex;
-  // justify-content: space-between;
-  color: #888;
 
   > span {
     margin-right: 5px;
     display: inline-flex;
     align-items: center;
-  }
-
-  svg {
-    margin: 0 2px;
-    width: 15px;
-    height: 15px;
   }
 }
 
@@ -99,7 +126,32 @@
   grid-area: price;
   justify-self: flex-end;
   padding: 2px 10px;
-  color: #888;
   border: 1px solid;
   border-radius: 10px;
+}
+
+.actions {
+  border-top: 1px solid #bbb;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.create {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+
+  button {
+    padding: 15px 20px;
+    width: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #444;
+    background-color: #76f0aa;
+    border-color: transparent;
+  }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { MdUndo, MdPersonOutline,  } from 'react-icons/md';
-import { FiMoon, FiRefreshCcw } from "react-icons/fi";
+import { MdUndo, MdPersonOutline,} from 'react-icons/md';
+import { FiMoon, FiRefreshCcw, FiDownload, FiFilter } from "react-icons/fi";
 
 import styles from './styles.scss';
 
@@ -18,61 +18,85 @@ const resolveCc = currency => {
   return currency
 }
 
-export const BookingList = ({...props}) => {
+export const BookingList = React.memo(({ ...props }) => {
   const [active, setActive] = React.useState('')
+  const [value, setValue] = React.useState('')
+
+  const filtered = props.data.filter(i => i.guestName.toLowerCase().indexOf(value.toLowerCase()) !== -1);
 
   return (
-    <>
-      {props.data.map(booking => (
-        <div key={booking.id}
-          className={classNames(styles.ListItem, {
-            [styles.active]: active === booking.id
-          })}
-          onClick={() => setActive(booking.id)}
-        >
-          {booking.status && (
-            <i className={classNames(styles.status, styles[booking.status])} />
-          )}
+    <div className={styles.ListWrapper}>
+      <div className={styles.Filter}>
+        <input
+          value={value}
+          onChange={e => setValue(e.target.value)}
+          placeholder='Search'
+        />
+        <FiFilter />
+      </div>
 
-          {booking.replied && <MdUndo className={styles.replied} />}
+      <div className={styles.List}>
+        <>
+          {filtered.map(booking => (
+            <div key={booking.id}
+              className={classNames(styles.ListItem, {
+                [styles.active]: active === booking.id
+              })}
+              onClick={() => setActive(booking.id)}
+            >
+              {booking.status && (
+                <i className={classNames(styles.status,styles[booking.status])} />
+              )}
 
-          {booking.guestName && <span className={styles.name}>{booking.guestName}</span>}
+              {booking.replied && <MdUndo className={styles.replied} />}
 
-          {booking.propertyName && <span className={styles.property}>{booking.propertyName}</span>}
+              {booking.guestName && <span className={styles.name}>{booking.guestName}</span>}
 
-          {!!booking.dateCreated && <span className={styles.created}>{booking.dateCreated.toLocaleDateString  ()}</span>}
+              {booking.propertyName && <span className={styles.property}>{booking.propertyName}</span>}
 
-          <div className={styles.dates}>
-            {/* TOFIX */}
-            {booking.dateArrival && <span>{booking.dateArrival.toDateString()},</span>}
+              {!!booking.dateCreated && <span className={styles.created}>{booking.dateCreated.toLocaleDateString()}</span>}
 
-            {/* TOFIX */}
-            <span>
-              {new Date(booking.dateDeparture.getTime() - booking.dateArrival.getTime()).getDay()}
-              <FiMoon />
-            </span>
+              <div className={styles.dates}>
+                {/* TOFIX */}
+                {booking.dateArrival && <span>{booking.dateArrival.toDateString()},</span>}
 
-            {booking.people && (
-              <span>
-                {booking.people}
-                <MdPersonOutline />
-              </span>
-            )}
-          </div>
+                {/* TOFIX */}
+                <span>
+                  {new Date(booking.dateDeparture.getTime() - booking.dateArrival.getTime()).getDay()}
+                  <FiMoon />
+                </span>
 
-          {booking.amountPaid && (
-            <span className={styles.price}>
-              {booking.amountPaid}
-              {resolveCc(booking.currencyCode)}
-            </span>
-          )}
+                {booking.people && (
+                  <span>
+                    {booking.people}
+                    <MdPersonOutline />
+                  </span>
+                )}
+              </div>
 
-          {/* {booking.amountDue ? booking.amountDue : 'booking.amountDue'}
-          {booking.read ? booking.read : 'booking.read'}
-          {booking.totalAmount ? booking.totalAmount : 'booking.totalAmount'} */}
+              {booking.amountPaid && (
+                <span className={styles.price}>
+                  {booking.amountPaid}
+                  {resolveCc(booking.currencyCode)}
+                </span>
+              )}
+            </div>
+          ))}
+        </>
+      </div>
+
+      <div className={styles.actions}>
+        <div className={styles.selected}>
+          <span>Select</span>
+          <FiDownload />
+          <FiRefreshCcw />
         </div>
-      ))}
-    </>
+
+        <div className={styles.create}>
+          <button>create booking</button>
+        </div>
+      </div>
+    </div>
   )
-}
+})
 export default BookingList

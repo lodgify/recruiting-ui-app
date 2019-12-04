@@ -10,12 +10,33 @@
 .Main {
   grid-area: main;
   grid-gap: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 10px 0;
+    font-size: 40px;
+    font-weight: 400;
+  }
 }
 
-.ListWrapper {
+.buttons {
+  margin: 50px;
+
+  button {
+    display: block;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 300px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    background: transparent;
+    border: 1px solid;
+  }
+}
+
+.Sidebar {
   grid-area: list;
   width: 100%;
-  max-height: 100vh;
-  overflow-y: auto;
   background-color: #ebebe5;
 }
