@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import classNames from 'classnames';
 
 import { MdUndo, MdPersonOutline,} from 'react-icons/md';
@@ -45,7 +46,7 @@ export const BookingList = React.memo(({ ...props }) => {
               onClick={() => setActive(booking.id)}
             >
               {booking.status && (
-                <i className={classNames(styles.status,styles[booking.status])} />
+                <i className={classNames(styles.status, styles[booking.status])} />
               )}
 
               {booking.replied && <MdUndo className={styles.replied} />}
@@ -54,15 +55,15 @@ export const BookingList = React.memo(({ ...props }) => {
 
               {booking.propertyName && <span className={styles.property}>{booking.propertyName}</span>}
 
-              {!!booking.dateCreated && <span className={styles.created}>{booking.dateCreated.toLocaleDateString()}</span>}
+              {!!booking.dateCreated && <span className={styles.created}>
+                {moment(booking.dateCreated).format("DD/MM/YYYY")}
+              </span>}
 
               <div className={styles.dates}>
-                {/* TOFIX */}
-                {booking.dateArrival && <span>{booking.dateArrival.toDateString()},</span>}
+                {booking.dateArrival && <span>{moment(booking.dateArrival).format("MMMM DD YYYY")},</span>}
 
-                {/* TOFIX */}
                 <span>
-                  {new Date(booking.dateDeparture.getTime() - booking.dateArrival.getTime()).getDay()}
+                  {moment(booking.dateArrival).diff(booking.dateDeparture, 'days')}
                   <FiMoon />
                 </span>
 

@@ -24,20 +24,20 @@ export class Component extends React.PureComponent {
 
     return (
       <div className={styles.Page}>
-        <div className={styles.Main}>
+        <main className={styles.Main}>
           <CalendarLogo />
           <h1>Reservations</h1>
-          <p>Select any reservation item</p>
+          <em>Select any reservation item</em>
 
           <div className={styles.buttons}>
             <button>Create Booking</button>
             <button>Create Booking with Quote</button>
           </div>
-        </div>
+        </main>
 
-        <div className={styles.Sidebar}>
+        <aside className={styles.Sidebar}>
           { <BookingList data={this.props.data} /> }
-        </div>
+        </aside>
       </div>
     );
   }
