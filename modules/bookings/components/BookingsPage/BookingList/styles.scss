@@ -1,0 +1,105 @@
+.ListItem {
+  display: grid;
+  grid-template-areas:
+    'status name created'
+    'replied property property'
+    '. dates price';
+  // grid-template-columns: 20px auto 60px;
+  grid-gap: 0 10px;
+  align-items: flex-end;
+  padding: 20px;
+  max-height: 100px;
+  font-size: 12px;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+
+  &:hover {
+    background-color: #efefef;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: #fff;
+  }
+
+  * {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.status {
+  grid-area: status;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &.Booked {
+    background-color: green;
+  }
+
+  &.Declined {
+    background-color: red;
+  }
+
+  &.Unavailable {
+    background-color: gray;
+  }
+
+  &.Tentative,
+  &.Open {
+    background-color: orange;
+  }
+}
+
+.replied {
+  grid-area: replied;
+}
+
+.name {
+  grid-area: name;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.property {
+  grid-area: property;
+  font-size: 13px;
+  color: #444;
+}
+
+.created {
+  grid-area: created;
+  justify-self: flex-end;
+}
+
+.dates {
+  grid-area: dates;
+  display: flex;
+  // justify-content: space-between;
+  color: #888;
+
+  > span {
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  svg {
+    margin: 0 2px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.price {
+  grid-area: price;
+  justify-self: flex-end;
+  padding: 2px 10px;
+  color: #888;
+  border: 1px solid;
+  border-radius: 10px;
+}

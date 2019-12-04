@@ -1,8 +1,9 @@
 import React from 'react';
 import { func, bool, arrayOf, shape, string } from 'prop-types';
 
+import BookingList from './BookingList'
 import CalendarLogo from '../../../../static/calendar.svg';
-import styles from './styles.css';
+import styles from './styles.scss';
 
 export class Component extends React.PureComponent {
   static displayName = 'BookingsPage';
@@ -22,11 +23,15 @@ export class Component extends React.PureComponent {
     if (this.props.hasFailed || !this.props.data) return 'Failed :(';
 
     return (
-      <>
-        <h1 className={styles.Title}>Welcome!</h1>
-        <CalendarLogo />
-        {this.props.data.map(booking => booking.guestName)}
-      </>
+      <div className={styles.Page}>
+        <div className={styles.Main}>
+          <CalendarLogo />
+        </div>
+
+        <div className={styles.ListWrapper}>{
+          <BookingList data={this.props.data} />
+        }</div>
+      </div>
     );
   }
 }
