@@ -29,12 +29,13 @@ export class Component extends React.PureComponent {
           <h1>Reservations</h1>
           <em>Select any reservation item</em>
 
-          <div className={styles.buttons}>
+          <div className={styles.Actions}>
             <button>Create Booking</button>
             <button>Create Booking with Quote</button>
           </div>
         </main>
 
+        {/* collapse for smaller screens? */}
         <aside className={styles.Sidebar}>
           { <BookingList data={this.props.data} /> }
         </aside>

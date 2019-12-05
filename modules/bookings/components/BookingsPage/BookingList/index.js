@@ -3,7 +3,7 @@ import moment from 'moment';
 import classNames from 'classnames';
 
 import { MdUndo, MdPersonOutline,} from 'react-icons/md';
-import { FiMoon, FiRefreshCcw, FiDownload, FiFilter } from "react-icons/fi";
+import { FiMoon, FiRefreshCcw, FiDownload, FiFilter } from 'react-icons/fi';
 
 import styles from './styles.scss';
 
@@ -24,6 +24,7 @@ export const BookingList = React.memo(({ ...props }) => {
   const [value, setValue] = React.useState('')
 
   const filtered = props.data.filter(i => i.guestName.toLowerCase().indexOf(value.toLowerCase()) !== -1);
+  // should probably use throttle / debounce
 
   return (
     <div className={styles.ListWrapper}>
@@ -56,14 +57,15 @@ export const BookingList = React.memo(({ ...props }) => {
               {booking.propertyName && <span className={styles.property}>{booking.propertyName}</span>}
 
               {!!booking.dateCreated && <span className={styles.created}>
-                {moment(booking.dateCreated).format("DD/MM/YYYY")}
+                {moment(booking.dateCreated).format('DD/MM/YYYY')}
               </span>}
 
               <div className={styles.dates}>
-                {booking.dateArrival && <span>{moment(booking.dateArrival).format("MMMM DD YYYY")},</span>}
+                {booking.dateArrival && <span>{moment(booking.dateArrival).format('MMMM DD YYYY')},</span>}
 
                 <span>
-                  {moment(booking.dateArrival).diff(booking.dateDeparture, 'days')}
+                  {/* In some cases, dateDeparture is before dateArrives. atm it will return a negative value */}
+                  {moment(booking.dateDeparture).diff(booking.dateArrival, 'days')}
                   <FiMoon />
                 </span>
 
